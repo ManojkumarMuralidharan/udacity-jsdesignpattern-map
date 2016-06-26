@@ -3,7 +3,8 @@ require.config({
   // expose jquery 
   paths: {
     "bower_components": "../bower_components",
-    "jquery": "../bower_components/jquery/jquery"
+    "jquery": "../bower_components/jquery/jquery",
+    "async": "../bower_components/async/dist/async.min"
   },
   map: {
     "*": {

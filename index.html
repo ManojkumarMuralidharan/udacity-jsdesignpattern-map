@@ -4,12 +4,22 @@
   <meta charset="utf-8">
   <title>Udacity js design pattern final project</title>
   <script data-main="app/config" src="bower_components/requirejs/require.js"></script>
+<style>
+.mapView{
+	height:600px; 
+	width:600px; 
+}
+</style>
 </head>
+
 <body>
   <h1>mapgator running!</h1>
   <div>
       Data Binding: 
       <span class="status" data-bind="text: status">Inactive</span>
   </div>
+  <div class="mapView" data-bind="googlemap: locations ">
+  </div>
+
 </body>
 </html>

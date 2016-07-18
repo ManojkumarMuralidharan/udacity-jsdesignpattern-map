@@ -18,7 +18,27 @@
       Data Binding: 
       <span class="status" data-bind="text: status">Inactive</span>
   </div>
+  <ul data-bind="foreach: locations">
+  	<li>
+  		<span data-bind="text: name"></span> - 
+  		<span data-bind="text: latitude"></span> : 
+  		<span data-bind="text: longitude"> </span>
+  	</li>
+  </ul>
   <div class="mapView" data-bind="googlemap: locations ">
+  </div>
+  <div>
+  <label>Search</label>
+  <input data-bind="value: searchValue,valueUpdate:'afterkeydown'" type="text" />
+  </div>
+  <div class="searchSection" data-bind="searchlocations: searchValue, locations: locations, results: searchResults">    
+      <ul data-bind="foreach: searchResults" >
+      <li>
+        <span data-bind="text: name"></span> - 
+        <span data-bind="text: latitude"></span> : 
+        <span data-bind="text: longitude"> </span>
+      </li>
+      </ul>
   </div>
 
 </body>
